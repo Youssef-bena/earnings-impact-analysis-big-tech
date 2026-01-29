@@ -17,8 +17,8 @@ API ingestion → data cleaning → SQL modeling → interactive Power BI dashbo
 
 ## 👋 Who this project is for
 
-- **Recruiters / Hiring Managers** → focus on [**Business Questions**](#business-questions), [**Dashboard Preview**](#dashboard-preview) and [**Key Results**](#key-results)
-- **Technical reviewers** → jump to [**Technical Deep Dive**](#technical-deep-dive) (Python / SQL links) 
+- **Recruiters / Hiring Managers** → focus on *Business Questions*, *Key Results*, and *Dashboard Preview*.
+- **Technical reviewers** → jump to *Technical Deep Dive* (Python / SQL links)
 
 ---
 
