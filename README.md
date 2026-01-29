@@ -1,44 +1,27 @@
-## 👋 Who this project is for
+# 📊 Earnings Reaction Analysis (API → SQL → Power BI)
 
-- **Recruiters / Hiring Managers**:  
-  Focus on the *Business Questions*, *Key Results*, and *Dashboard Preview* sections.
+⏱️ *Estimated reading time: 3 minutes*
 
-- **Technical reviewers**:  
-  Jump directly to the *Technical Deep Dive* section with links to Python, SQL, and data models.
+Measure how stock prices react to quarterly earnings announcements using an **end-to-end analytics pipeline**:  
+data ingestion (Yahoo Finance) → cleaning & feature engineering (Python) → storage & querying (SQLite) → interactive reporting (Power BI).
 
-
-## 🎯 Business Problem
-
-Quarterly earnings announcements often trigger strong market reactions, but those reactions are not always intuitive.
-
-This project answers a simple question:
-**Does “beating earnings” actually translate into positive stock performance?**
-
-The goal is not prediction, but understanding **patterns, volatility, and expectations** in market behavior.
-
-
-# Earnings Reaction Analysis (API → SQL → Power BI)
-
-Measure how stock prices react to quarterly earnings announcements using an end-to-end analytics pipeline: data ingestion (Yahoo Finance) → cleaning/feature engineering (Python) → storage/querying (SQLite) → interactive reporting (Power BI).
-
-**Scope:** 6 Big Tech companies (AAPL, MSFT, GOOGL, AMZN, META, TSLA), 2022–2026, ±5 trading days around each earnings date  
-**Deliverables:** SQLite database + reproducible scripts + Power BI dashboard (screenshots below)  
+**Scope:** 6 Big Tech companies (AAPL, MSFT, GOOGL, AMZN, META, TSLA) • 2022–2026 • ±5 trading days around each earnings date  
+**Deliverables:** SQLite database • reproducible Python/SQL scripts • Power BI dashboard  
 **Disclaimer:** Educational project only — not financial advice.
 
 ---
 
-## Business questions answered
+## 🎯 Business Questions Answered
 
-1. **Do stocks tend to rise after “beats” vs “misses”?** (beat / in-line / miss impact on post-earnings returns)  
-2. **Which companies show the most consistent post-earnings behavior?** (win rate + dispersion by company)  
-3. **How often does “sell the news” occur?** (beats that still lead to negative returns)  
-4. **How strong is the relationship between EPS surprise and price reaction?** (correlation + outliers/limits)  
-5. **Are there time patterns (year/quarter) in post-earnings reactions?**
+1. **Do stocks tend to rise after “beats” vs “misses”?**  
+2. **Which companies show the most consistent post-earnings behavior?**  
+3. **How often does “sell the news” occur?**  
+4. **How strong is the link between EPS surprise and price reaction?**  
+5. **Are there time patterns (year / quarter) in earnings reactions?**
 
 ---
 
-## Dashboard preview (Power BI)
-
+## 📊 Dashboard Preview (Power BI)
 
 ![Executive Summary](data/processed/visualizations/dashboard_preview-1.png)  
 ![Company Deep Dive](data/processed/visualizations/dashboard_preview-2.png)  
@@ -48,45 +31,55 @@ Measure how stock prices react to quarterly earnings announcements using an end-
 
 ---
 
-## Key results (high level)
+## 🔑 Key Results (High-Level)
 
-- **Beating earnings helps** - but only gives +1.22% average return (vs -1.16% for misses).  
-- **Company differences:** reactions vary meaningfully by company (some more volatile, some more stable).
--   **Tesla outperforms:** +2.24% average return per earnings, 56.25% win rate.
--   **Google disappoints:** -0.59% average return despite often beating estimates.
-- **“Sell the news” exists:** a non-trivial share of beats still lead to negative returns.  
-- **Predictability is limited:** outcomes remain noisy; this is better for *directional insight* than “prediction.” 54.17% win rate (barely better than coin flip)
+- **Beating earnings helps — but modestly**  
+  Average post-earnings return of **+1.22%** for beats vs **-1.16%** for misses.
 
+- **Company behavior matters more than timing**  
+  Some companies react consistently, others remain highly volatile.
 
+- **Tesla stands out**  
+  +2.24% average return per earnings, **56.25% win rate**.
 
+- **Google underperforms**  
+  -0.59% average return despite frequently beating expectations.
+
+- **“Sell the news” is real**  
+  A meaningful share of earnings beats still lead to negative returns.
+
+- **Predictability is limited**  
+  Overall win rate of **~54%**, barely better than a coin flip.
+
+**Bottom line:** *Earnings create volatility, not reliable profits. Company selection matters more than timing.*
 
 ---
 
-## What this project demonstrates (skills)
+## 🧩 What This Project Demonstrates
 
-- **Data acquisition:** API ingestion (yfinance) + handling missing/uneven fields  
-- **Data engineering:** cleaning, type enforcement, timezone normalization, validations  
+- **Data acquisition:** API ingestion (yfinance) and handling missing / uneven fields  
+- **Data engineering:** cleaning, type enforcement, timezone normalization, validation  
 - **Analytics:** metric design (pre/post windows), categorization, outlier handling  
 - **SQL:** schema design, constraints, indexes, analytical queries  
-- **BI:** star-schema modeling, DAX measures, dashboard UX and interactivity  
-- **Communication:** documented methodology, assumptions, and limitations
+- **BI:** star-schema modeling, DAX measures, dashboard UX & interactivity  
+- **Communication:** clear insights, assumptions, and limitations
 
 ---
 
-## Data sources
+## 🗂️ Data Sources
 
-- **Prices & earnings:** Yahoo Finance via `yfinance`  4,500+ daily prices
+- **Prices & earnings:** Yahoo Finance via `yfinance` (4,500+ daily prices)  
 - **Period:** 2022-01-01 → 2026-01-16  
 - **Window:** 5 trading days before + 5 trading days after earnings
 
 ---
 
-## Repository structure
+## 🗃️ Repository Structure
 
 ```
 ├── scripts/              # data collection, metric calculation, exports
 ├── sql/                  # database schema & queries
-├── data/sample/          # small sample datasets 
+├── data/sample/          # small sample datasets
 ├── notebooks/            # optional exploration notebooks
 ├── visualizations/       # charts & dashboard screenshots
 └── docs/                 # methodology, insights, technical notes
@@ -94,7 +87,7 @@ Measure how stock prices react to quarterly earnings announcements using an end-
 
 ---
 
-## Methodology (summary)
+## 🧠 Methodology (Summary)
 
 For each earnings event:
 - Collect daily prices around the event date  
@@ -107,13 +100,13 @@ For each earnings event:
   - EPS: **Beat / In-line / Miss**
   - Reaction: **Strong positive / positive / negative / strong negative**
 
-Full details: [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md)
+📘 Full details: [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md)
 
 ---
 
-## Quickstart (reproducible)
+## 🚀 Quickstart (Reproducible)
 
-### 1) Install
+### 1️⃣ Install
 ```bash
 python -m venv .venv
 # Windows: .venv\Scripts\activate
@@ -122,24 +115,21 @@ python -m venv .venv
 pip install -r requirements.txt
 ```
 
-### 2) Run pipeline
+### 2️⃣ Run the pipeline
 ```bash
-# Collect raw data (Yahoo Finance)
 python scripts/collect_data.py
-
-# Calculate metrics + write to SQLite + export CSV for Power BI
 python scripts/calculate_metrics.py
 ```
 
-### 3) Open dashboard
+### 3️⃣ Open the dashboard
 - Open `dashboards/Earnings_Analysis_Dashboard.pbix` in Power BI Desktop  
-- Refresh if needed, or load from exported CSVs (see `docs/SETUP.md`)
+- Refresh or load from exported CSVs (see `docs/SETUP.md`)
 
-Full setup guide: [`docs/SETUP.md`](docs/SETUP.md)
+📄 Full setup guide: [`docs/SETUP.md`](docs/SETUP.md)
 
 ---
 
-## Sample SQL query
+## 🧮 Sample SQL Query
 
 ```sql
 -- Which companies have the best post-earnings track record?
@@ -156,37 +146,37 @@ GROUP BY symbol
 ORDER BY avg_return DESC;
 ```
 
-More queries: [`sql/queries.sql`](sql/queries.sql)
+🔗 More queries: [`sql/queries.sql`](sql/queries.sql)
 
 ---
 
-## Limitations 
+## ⚠️ Limitations
 
-- **Small sample size per company** (quarterly earnings events are limited).  
-- **Confounding factors:** macro news, guidance, sentiment, and other events can dominate post-earnings moves.  
-- **Data gaps:** EPS estimate/actual fields may be missing for some periods.  
-- **Not predictive:** results are descriptive and directional; not a trading system.
+- Small sample size per company (quarterly events only)  
+- Market reactions influenced by external news and sentiment  
+- EPS alone does not explain price movement  
+- Analysis is descriptive, not predictive
 
 ---
 
-## Next steps
+## 🔮 Next Steps
 
 - Expand to more companies and sectors  
-- Build machine learning prediction model  
-- Create real-time dashboard with automated data refresh  
-- Analyze longer time period
+- Add additional explanatory variables (guidance, sentiment)  
+- Build and evaluate ML models with proper validation  
+- Automate data refresh and dashboard updates
 
 ---
 
-## Contact
+## 📞 Contact
 
 **Youssef Ben Abdallah**  
-Email: youssef.bena.it@gmail.com  
-LinkedIn: https://www.linkedin.com/in/youssefbena/  
-GitHub: https://github.com/Youssef-bena  
+📧 Email: youssef.bena.it@gmail.com  
+💼 LinkedIn: https://www.linkedin.com/in/youssefbena/  
+💻 GitHub: https://github.com/Youssef-bena  
 
 ---
 
-## License
+## 📄 License
 
 MIT — see [`LICENSE`](LICENSE).
