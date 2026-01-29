@@ -29,7 +29,7 @@ Measure how stock prices react to quarterly earnings announcements using an end-
 
 ---
 
-## Key results (high level)
+## Key results 
 
 - **Beating earnings helps** - but only gives +1.22% average return (vs -1.16% for misses).  
 - **Company differences:** reactions vary meaningfully by company (some more volatile, some more stable).
