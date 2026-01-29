@@ -8,7 +8,8 @@ API ingestion → data cleaning → SQL modeling → interactive Power BI dashbo
 **Scope:** 
 - 6 Big Tech companies (AAPL, MSFT, GOOGL, AMZN, META, TSLA) 
 - 2022–2026 
-- ±5 trading days  
+- ±5 trading days
+  
 **Deliverables:** Python scripts / SQLite database / Power BI dashboard  
 **Disclaimer:** Educational project only — not financial advice.
 
@@ -16,8 +17,8 @@ API ingestion → data cleaning → SQL modeling → interactive Power BI dashbo
 
 ## 👋 Who this project is for
 
-- **Recruiters / Hiring Managers** → focus on *Business Questions*, *Key Results*, and *Dashboard Preview*  
-- **Technical reviewers** → jump to *Technical Deep Dive* (Python / SQL links)
+- **Recruiters / Hiring Managers** → focus on [**Business Questions**](#business-questions), [**Dashboard Preview**](#dashboard-preview) and [**Key Results**](#key-results)
+- **Technical reviewers** → jump to [**Technical Deep Dive**](#technical-deep-dive) (Python / SQL links) 
 
 ---
 
