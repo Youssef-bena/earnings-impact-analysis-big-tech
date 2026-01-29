@@ -1,0 +1,9 @@
+pandas
+numpy
+yfinance
+matplotlib
+sys
+os
+sqlite3
+datetime
+config
