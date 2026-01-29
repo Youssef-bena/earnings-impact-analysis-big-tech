@@ -5,8 +5,11 @@
 This project analyzes how stock prices react to **quarterly earnings announcements** using an **end-to-end analytics pipeline**:  
 API ingestion → data cleaning → SQL modeling → interactive Power BI dashboard.
 
-**Scope:** 6 Big Tech companies (AAPL, MSFT, GOOGL, AMZN, META, TSLA) • 2022–2026 • ±5 trading days  
-**Deliverables:** Python scripts • SQLite database • Power BI dashboard  
+**Scope:** 
+- 6 Big Tech companies (AAPL, MSFT, GOOGL, AMZN, META, TSLA) 
+- 2022–2026 
+- ±5 trading days  
+**Deliverables:** Python scripts / SQLite database / Power BI dashboard  
 **Disclaimer:** Educational project only — not financial advice.
 
 ---
@@ -30,44 +33,36 @@ API ingestion → data cleaning → SQL modeling → interactive Power BI dashbo
 
 ## 📊 Dashboard Preview (Power BI)
 
-✅ **Yes — 5 screenshots is perfectly acceptable** when each page answers a different question.
 
-![Executive Summary](data/processed/visualizations/dashboard_preview-1.png)  
 *High-level KPIs and overall earnings impact*
+![Executive Summary](data/processed/visualizations/dashboard_preview-1.png)  
 ---
-![Company Deep Dive](data/processed/visualizations/dashboard_preview-2.png)  
 *Per-company performance and volatility*
+![Company Deep Dive](data/processed/visualizations/dashboard_preview-2.png)  
 ---
-![EPS Surprise Analysis](data/processed/visualizations/dashboard_preview-3.png)  
 *Beat vs Miss impact and “sell the news” cases*
+![EPS Surprise Analysis](data/processed/visualizations/dashboard_preview-3.png)  
 ---
-![Time Trends](data/processed/visualizations/dashboard_preview-4.png)  
 *Quarterly and yearly reaction patterns*
+![Time Trends](data/processed/visualizations/dashboard_preview-4.png)  
 ---
-![Detailed Explorer](data/processed/visualizations/dashboard_preview-5.png)  
 *Event-level drill-down and filtering*
-
+![Detailed Explorer](data/processed/visualizations/dashboard_preview-5.png)  
 ---
 
-## 🔑 Key Results (High-Level)
+## 🔑 Key Results 
 
-- **Beating earnings helps — but modestly**  
-  Average post-earnings return of **+1.22%** for beats vs **-1.16%** for misses.
+- **Beating earnings helps — but modestly:** Average post-earnings return of **+1.22%** for beats vs **-1.16%** for misses.
 
-- **Company behavior matters more than timing**  
-  Some companies react consistently, others remain highly volatile.
+- **Company behavior matters more than timing:** Some companies react consistently, others remain highly volatile.
 
-- **Tesla stands out**  
-  +2.24% average return per earnings, **56.25% win rate**.
+- **Tesla stands out:** +2.24% average return per earnings, **56.25% win rate**.
 
-- **Google underperforms**  
-  -0.59% average return despite frequently beating expectations.
+- **Google underperforms:** -0.59% average return despite frequently beating expectations.
 
-- **“Sell the news” is real**  
-  A meaningful share of earnings beats still lead to negative returns.
+- **“Sell the news” is real:** A meaningful share of earnings beats still lead to negative returns.
 
-- **Predictability is limited**  
-  Overall win rate of **~54%**, barely better than a coin flip.
+- **Predictability is limited:** Overall win rate of **~54%**, barely better than a coin flip.
 
 **Bottom line:** *Earnings create volatility, not reliable profits. Company selection matters more than timing.*
 
@@ -86,16 +81,12 @@ API ingestion → data cleaning → SQL modeling → interactive Power BI dashbo
 ## 🧠 Technical Deep Dive (for data & engineering profiles)
 
 ### 🐍 Python
-- Data collection: [`scripts/collect_data.py`](scripts/collect_data.py)
-- Metric calculation: [`scripts/calculate_metrics.py`](scripts/calculate_metrics.py)
+- Data collection: [`scripts/day2_yahoo_only.py`](scripts/day2_yahoo_only.py)
+- Metric calculation: [`scripts/day3_analysis.py`](scripts/day3_analysis.py)
 
 ### 🗄️ SQL
-- Schema definition: [`sql/schema.sql`](sql/schema.sql)
-- Analysis queries: [`sql/queries.sql`](sql/queries.sql)
-
-### 📊 Power BI
-- Dashboard file: `dashboards/Earnings_Analysis_Dashboard.pbix`
-- Star schema & measures: [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md)
+- Schema definition: [`sql/schema.sql`](sql/01_create_schema.sql)
+- Analysis queries: [`sql/queries.sql`](sql/03_analysis_queries.sql)
 
 ---
 
