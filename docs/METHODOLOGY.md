@@ -1,42 +1,35 @@
-\# Methodology
+##### 📘 Methodology
 
+###### Objective
 
+Analyze how stock prices react to quarterly earnings announcements and determine whether earnings surprises (beats/misses) influence short-term market movements.
 
-This project measures how stock prices react to quarterly earnings announcements.
+##### Data Sources
 
+* **Stock prices \& earnings data:** Yahoo Finance (via yfinance)
+* **Companies analyzed:** AAPL, MSFT, GOOGL, AMZN, META, TSLA
+* **Period:** 2022–2026
 
+##### Analysis Window
 
-\## Approach
+* **Pre-earnings:** 5 trading days before announcement
+* **Post-earnings:** 5 trading days after announcement
+  This window balances immediate reaction and delayed market adjustment while limiting noise.
 
-\- Collect daily prices and earnings dates from Yahoo Finance
+##### Metrics
 
-\- Analyze ±5 trading days around each earnings event
+* Pre-earnings return (%)
+* Post-earnings return (%)
+* Immediate reaction (next trading day)
+* EPS surprise (%)
 
-\- Compute post-earnings returns and EPS surprise
+##### Categorization
 
-\- Store results in a SQLite database
+* **EPS:** Beat (>5%), In-Line (±5%), Miss (<-5%)
+* **Price reaction:** Strong Positive, Positive, Negative, Strong Negative
 
-\- Visualize insights in Power BI
+##### Limitations
 
-
-
-\## Key Definitions
-
-\- Post-earnings return: % change over 5 trading days after earnings : 100 \*(5days after earnings - earnings price) / earnings price
-
-\- immediate return: % change over 5 trading days after earnings : 100 \*(day after earnings - earnings price) / earnings price
-
-\- EPS Surprise: (Actual − Estimate) / |Estimate|
-
-
-
-\## Assumptions \& Limitations
-
-\- Earnings are analyzed independently
-
-\- Other market news may influence price movements
-
-\- Results are descriptive, not predictive
-
-
-
+* Quarterly data → small sample size
+* External news may influence price movements
+* Analysis is descriptive, not predictive
