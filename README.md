@@ -21,11 +21,11 @@ Measure how stock prices react to quarterly earnings announcements using an end-
 ## Dashboard preview (Power BI)
 
 
-![Executive Summary](visualizations/dashboard_preview-1.png)  
-![Company Deep Dive](visualizations/dashboard_preview-2.png)  
-![EPS Surprise Analysis](visualizations/dashboard_preview-3.png)  
-![Time Trends](visualizations/dashboard_preview-4.png)  
-![Detailed Explorer](visualizations/dashboard_preview-5.png)
+![Executive Summary](data/processed/visualizations/dashboard_preview-1.png)  
+![Company Deep Dive](data/processed/visualizations/dashboard_preview-2.png)  
+![EPS Surprise Analysis](data/processed/visualizations/dashboard_preview-3.png)  
+![Time Trends](data/processed/visualizations/dashboard_preview-4.png)  
+![Detailed Explorer](data/processed/visualizations/dashboard_preview-5.png)
 
 ---
 
