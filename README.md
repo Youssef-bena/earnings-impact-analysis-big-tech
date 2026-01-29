@@ -34,16 +34,16 @@ API ingestion → data cleaning → SQL modeling → interactive Power BI dashbo
 
 ![Executive Summary](data/processed/visualizations/dashboard_preview-1.png)  
 *High-level KPIs and overall earnings impact*
-
+---
 ![Company Deep Dive](data/processed/visualizations/dashboard_preview-2.png)  
 *Per-company performance and volatility*
-
+---
 ![EPS Surprise Analysis](data/processed/visualizations/dashboard_preview-3.png)  
 *Beat vs Miss impact and “sell the news” cases*
-
+---
 ![Time Trends](data/processed/visualizations/dashboard_preview-4.png)  
 *Quarterly and yearly reaction patterns*
-
+---
 ![Detailed Explorer](data/processed/visualizations/dashboard_preview-5.png)  
 *Event-level drill-down and filtering*
 
