@@ -1,3 +1,22 @@
+## 👋 Who this project is for
+
+- **Recruiters / Hiring Managers**:  
+  Focus on the *Business Questions*, *Key Results*, and *Dashboard Preview* sections.
+
+- **Technical reviewers**:  
+  Jump directly to the *Technical Deep Dive* section with links to Python, SQL, and data models.
+
+
+## 🎯 Business Problem
+
+Quarterly earnings announcements often trigger strong market reactions, but those reactions are not always intuitive.
+
+This project answers a simple question:
+**Does “beating earnings” actually translate into positive stock performance?**
+
+The goal is not prediction, but understanding **patterns, volatility, and expectations** in market behavior.
+
+
 # Earnings Reaction Analysis (API → SQL → Power BI)
 
 Measure how stock prices react to quarterly earnings announcements using an end-to-end analytics pipeline: data ingestion (Yahoo Finance) → cleaning/feature engineering (Python) → storage/querying (SQLite) → interactive reporting (Power BI).
