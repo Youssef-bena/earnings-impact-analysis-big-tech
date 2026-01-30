@@ -160,3 +160,11 @@ python scripts/calculate_metrics.py
 ## 📄 License
 
 MIT — see [`LICENSE`](LICENSE).
+
+---
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python)
+![SQL](https://img.shields.io/badge/SQL-SQLite-blue?logo=sqlite)
+![Power BI](https://img.shields.io/badge/Power%20BI-Desktop-yellow?logo=powerbi)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analysis-purple?logo=pandas)
+![License](https://img.shields.io/badge/License-MIT-green)
+
